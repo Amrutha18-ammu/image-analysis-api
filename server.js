@@ -35,8 +35,7 @@ app.post("/api/image-analysis/analyze", validateRequest, async (req, res) => {
     const result = await computerVisionClient.analyzeImage(imageURL,{visualFeatures: features, details: domainDetails});
     res.send(result)
   } catch(e) {
-    console.error(e)
-    res.status(500).send({e})
+    handleErrors(e, res)
   }
 })
 
@@ -51,7 +50,7 @@ app.post("/api/image-analysis/detect-tags", validateRequest, async(req, res) => 
         const tags = (await computerVisionClient.analyzeImage(tagsURL, { visualFeatures: ['Tags'] })).tags;
         res.send(tags)
       } catch(e) {
-        res.status(500).send(e)
+        handleErrors(e, res)
     }
 })
 
@@ -62,8 +61,7 @@ app.post("/api/image-analysis/detect-objects", validateRequest, async (req, res)
     const result = await computerVisionClient.detectObjects(imageURL);
     res.send(result)
   } catch(e) {
-    console.error(e)
-    res.status(500).send({e})
+    handleErrors(e, res)
   }
 })
 
@@ -73,8 +71,7 @@ app.post("/api/image-analysis/describe", validateRequest, async (req, res) => {
     const result = await computerVisionClient.describeImage(imageURL);
     res.send(result)
   } catch(e) {
-    console.error(e)
-    res.status(500).send({e})
+    handleErrors(e, res)
   }
 })
 
