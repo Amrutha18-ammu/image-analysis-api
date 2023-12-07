@@ -6,6 +6,19 @@ Welcome to the Image Analysis API ! This API allows you to perform various image
 
 This API is Developed on the Express.js framework, this API seamlessly incorporates with Azure Cognitive Services, providing robust capabilities for image analysis.
 
+## Overview of Image-Analysis-API
+
+![GitHub Logo](images/image-analysis-orig.png)
+
+By Utilizing the Image Analysis API, the information below can be extracted regarding the displayed image.
+
+| Feature    | Extracted Value             |  Description         |
+|------------|---------------------------- |----------------------|
+| Description| a person sitting at a table with a laptop  | Generates a human-readable phrase that describe the whole image content.  |
+| Tags       | Furniture,Clothing,Person   | Tags are recognizable objects, living beings,scenery and actions that appear in the image.  |
+| Color  | Grey,Green | It will display the colors in the image.  |
+| Objects  | person, Two Chairs, Laptop | Detect various objects within an image , including their approximate location |
+
 ## Prerequisite
 * Authentication is done by adding the HTTP request header `Image-Analysis-Subscription-Key` so please obtain the key from the email sent to you with subject "Image-Analysis-API-Key".
 
@@ -418,12 +431,14 @@ Here is a collection of common errors along with their explanations, organized a
 
 ## Example Error Response
 
+**HTTP StatusCode: 400**
 ```json
-{
-  "statusCode": 404,
-  "error": "Not Found",
-  "message": "The requested endpoint or resource was not found."
-}
+
+  {
+    "code": "InvalidArgument",
+    "message": "Image URL Missing"
+  }
+  
 ```
 
 ## Conclusion
