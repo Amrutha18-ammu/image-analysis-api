@@ -412,7 +412,7 @@ This  API returns a structured JSON response providing detailed insights into th
 Here is a collection of common errors along with their explanations, organized as follows:
 
  ### API Error Responses
-# API Error Responses
+
 
 | Status Code | Code                            | Error Type          | message                                                     |
 |-------------|-------------------------------- |-------------------- |-------------------------------------------------------------------|
