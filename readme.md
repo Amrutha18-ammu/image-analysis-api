@@ -23,13 +23,13 @@ By Utilizing the Image Analysis API, the information below can be extracted rega
 * Authentication is done by adding the HTTP request header `Image-Analysis-Subscription-Key` so please obtain the key from the email sent to you with subject "Image-Analysis-API-Key".
 
 ##  Getting Started
-* **Base URL:** http://localhost:3000/api/image-analysis
+* **Base URL:** https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis
 
 ## Endpoints
 
 ### /analyze 
 
-POST http://localhost:3000/api/image-analysis/analyze
+POST https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis/analyze
 
 The `/api/image-analysis/analyze` endpoint deeply analyzes images, extracting insights like image type, facial features, adult content, object categories, color, tags, description, identified objects, brands, and landmarks. Submitting a POST request triggers a comprehensive analysis, and the API returns a structured JSON response, valuable for precise image interpretation in content analysis applications. Clear error responses aid in issue identification, making it ideal for thorough image assessment in applications.
 
@@ -155,7 +155,7 @@ This  API returns a structured JSON response providing detailed insights into th
 
 ## /detect-tags
 
-POST http://localhost:3000/api/image-analysis/detect-tags
+POST https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis/detect-tags
 
 The `/api/image-analysis/detect-tags`  endpoint employs Azure Computer Vision to analyze an image and extract descriptive tags. Submit the image URL to trigger the process and obtain concise keywords representing the visual content. After receiving a POST request with the image URL, the API utilizes advanced algorithms from Azure Computer Vision to thoroughly analyze and categorize image elements, generating concise tags that capture the content's essence.
 
@@ -212,7 +212,7 @@ This  API returns a structured JSON response providing detailed insights into th
 
  ## /detect-objects
  
- POST http://localhost:3000/api/image-analysis/detect-objects
+ POST https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis/detect-objects
 
  The `/api/image-analysis/detect-objects` endpoint utilizes Azure Computer Vision to identify and outline objects in an image. Supplying the image URL triggers advanced algorithms for entity detection, providing insights into specific items within the image. Upon receiving a POST request with the image URL, the API employs Azure Computer Vision for advanced object detection, thoroughly analyzing the image and outlining distinct objects using state-of-the-art algorithms.
 
@@ -284,7 +284,7 @@ This  API returns a structured JSON response providing detailed insights into th
 ```
  ## /describe
 
- POST http://localhost:3000/api/image-analysis/describe
+ POST https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis/describe
 
 The `/api/image-analysis/describe` endpoint facilitates image description using the Azure Computer Vision service. Upon receiving a POST request with the image URL, the API engages the Computer Vision service to generate a descriptive analysis of the image's content. The primary purpose is to provide a textual description that captures the key elements and characteristics present in the visual content.
 
@@ -355,7 +355,7 @@ This request initiates the image analysis process and provides valuable insights
 
  ## /recognize-text
 
- POST http://localhost:3000/api/image-analysis/recognize-text
+ POST https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis/recognize-text
 
  The `/api/image-analysis/recognize-text` endpoint leverages the Azure Computer Vision service to recognize printed text within an image. By submitting a POST request with the image URL, the API engages the service's capabilities to identify and extract textual information. The primary purpose is to provide the recognized text present in the image.
 
