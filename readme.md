@@ -22,6 +22,9 @@ By Utilizing the Image Analysis API, the information below can be extracted rega
 ## Prerequisite
 * Authentication is done by adding the HTTP request header `Image-Analysis-Subscription-Key` so please obtain the key from the email sent to you with subject "Image-Analysis-API-Key".
 
+ * For accessing the API please use Following API Key
+`Image-Analysis-Subscription-Key` - **UNCC1701915606**
+
 ##  Getting Started
 * **Base URL:** https://stingray-app-rtsc5.ondigitalocean.app/api/image-analysis
 
